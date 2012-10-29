@@ -1,6 +1,6 @@
 // Diego Luca Candido
 
-#define HOST "176.58.109.10"
+
 #include "httplib.h"
 #ifndef DEV_SENSOR_H
 #define DEV_SENSOR_H
@@ -46,7 +46,6 @@ int send_to_site(char* username, char* password, char* project, char* apikey, ch
 	free(request_body);
 	}
 	else{
-		UARTWrite(1,"porcodio\n");
 		closeSocket(nn);
 
 	}
