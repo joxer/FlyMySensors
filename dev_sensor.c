@@ -33,10 +33,11 @@ int send_to_site(char* username, char* password, char* project, char* apikey, ch
 	_options_site[9] = mess;
 	
 	pp.parameters = _options_site;
-	char* request_body = get_http_request(&pp);
+	
 	//UARTWrite(1,request_body);
 	//char* param[] = {"user","joxer","password","joxer","apikey","02ef724a65a81a715b28e653f","brightness","999","humidity","989","temperature","979"};
 	if(nn != NULL){
+	char* request_body = get_http_request(&pp);
 	do_http_request(nn,request_body);
 	char* resp = http_get_response(nn);
 	//UARTWrite(1,resp);
